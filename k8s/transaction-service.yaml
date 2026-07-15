@@ -20,6 +20,9 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8082
+          env:
+            - name: DB_URL
+              value: "jdbc:postgresql://transaction-db-svc:5433/transactiondb"
 
 ---
 apiVersion: v1
